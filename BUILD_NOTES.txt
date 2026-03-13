@@ -1,0 +1,17 @@
+Proyecto ajustado para Gradle 6.7.1.
+
+Cambios principales:
+- AGP 4.2.2
+- Kotlin Gradle Plugin 1.5.31
+- Build scripts en Groovy para maximizar compatibilidad con Gradle 6.7.1
+- compileSdkVersion 30 / targetSdkVersion 30 / buildToolsVersion 30.0.3
+- Dependencias AndroidX/Play Services bajadas a versiones más compatibles con AGP 4.2.x
+- local.properties apunta a C:\Users\StarNet-Network\Desktop\android\Sdk\Sdk
+
+Comando sugerido:
+PowerShell:
+  .\scripts\build-debug-local-671.ps1
+
+Notas:
+- Gradle 6.7.1 no es compatible con la configuración anterior basada en AGP 8.5.x.
+- Si falla por JDK, usa Java 11 o Java 8. Evita Java 21 para ejecutar Gradle 6.7.1.
