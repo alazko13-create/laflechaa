@@ -20,13 +20,14 @@ jobs:
         with:
           distribution: temurin
           java-version: '11'
-          cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Setup Gradle 6.7.1
+        uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: '6.7.1'
 
       - name: Build Debug APK
-        run: ./gradlew --stacktrace --no-daemon assembleDebug
+        run: gradle --stacktrace --no-daemon assembleDebug
 
       - name: Upload APK
         if: success()
